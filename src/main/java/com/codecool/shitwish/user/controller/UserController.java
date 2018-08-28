@@ -42,9 +42,9 @@ public class UserController {
         //TODO
     }
 
-    @PostMapping("/test")
+    /*@PostMapping("/test")
     public String test(@RequestBody Test test){
         return test.getName();
-    }
+    }*/
 
 }
