@@ -10,21 +10,27 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-    @GetMapping("/user")
-    public JSONObject getUser(){
+    @GetMapping("/sampleuser")
+    public JSONObject sampleUser(){
         JSONObject obj = new JSONObject();
         obj.put("usrID", 2);
         obj.put("firstName", "Béláim");
         obj.put("lastName", "kecske");
         obj.put("email", "valami@akarmi.com");
         obj.put("phoneNumber", "12345678");
-        obj.put("coutry", "france");
+        obj.put("country", "france");
         obj.put("city", "paris");
         obj.put("zipCode", "2084");
         obj.put("street", "kossuth lajos utca");
         obj.put("profilePicture", "https://robohash.org/valami@akarmi.com.png");
 
         return obj;
+    }
+
+    @GetMapping("/user")
+    public JSONObject getUser(int usrID){
+        JSONObject object = new JSONObject();
+        return object;
     }
 
     @GetMapping("/adduser")
