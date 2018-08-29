@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class UserModel {
     @Id
     @GeneratedValue
-    int usrID;
+    Integer usrID;
 
 
     String firstName;
