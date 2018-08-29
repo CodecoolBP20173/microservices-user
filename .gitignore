@@ -94,8 +94,6 @@ fabric.properties
 # .idea/misc.xml
 # *.ipr
 
-application.properties
-
 # Sonarlint plugin
 .idea/sonarlint
 

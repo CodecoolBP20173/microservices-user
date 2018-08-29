@@ -1,21 +1,19 @@
 package com.codecool.shitwish.user.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class UserModel {
+
     @Id
     @GeneratedValue
-    int usrID;
+    Integer usrID;
 
 
     String firstName;
     String lastName;
 
-    @Column(unique = true)
+//    @Column(unique = true)
     String email;
 
     String phoneNumber;
@@ -29,11 +27,11 @@ public class UserModel {
     public UserModel() {
     }
 
-    public int getUsrID() {
+    public Integer getUsrID() {
         return usrID;
     }
 
-    public void setUsrID(int usrID) {
+    public void setUsrID(Integer usrID) {
         this.usrID = usrID;
     }
 
