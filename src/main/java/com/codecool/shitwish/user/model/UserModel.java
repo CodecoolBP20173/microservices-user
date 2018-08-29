@@ -33,7 +33,7 @@ public class UserModel {
         return usrID;
     }
 
-    public void setUsrID(int usrID) {
+    public void setUsrID(Integer usrID) {
         this.usrID = usrID;
     }
 
