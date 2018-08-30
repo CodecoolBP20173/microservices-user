@@ -13,13 +13,8 @@ public class UserService {
     @Autowired
     private static UserModelRepository repository;
 
-    EntityManager em;
-
-    public UserService(EntityManager em) {
-        this.em = em;
+    public UserService() {
     }
-
-//    public void add(JSONObject user){}
 
     private void update(){}
 
@@ -31,6 +26,13 @@ public class UserService {
 
     public UserModel getByEmail(String email){
         return repository.getByEmail(email);
+    }
+
+    public void addUser(UserModel user){
+        if (!repository.findAll().contains(user)){
+        repository.save(user);
+        }
+        else throw new IllegalArgumentException("This user already exists");
     }
 }
 

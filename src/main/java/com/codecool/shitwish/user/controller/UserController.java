@@ -1,6 +1,5 @@
 package com.codecool.shitwish.user.controller;
 
-import com.codecool.shitwish.user.model.Test;
 import com.codecool.shitwish.user.model.UserModel;
 import com.codecool.shitwish.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,8 +28,8 @@ public class UserController {
 //        return obj;
 //    }
 
-    @GetMapping("/user/userid")
-    public UserModel getUser( String email){
+    @GetMapping("/user")
+    public UserModel getUser(@RequestBody String email){
         return service.getByEmail(email);
     }
 
@@ -40,9 +39,9 @@ public class UserController {
 //        return object;
 //    }
 //
-    @GetMapping("/adduser")
-    public void addUser(UserModel user){
-
+    @PostMapping("/user")
+    public void addUser(@RequestBody UserModel user){
+        service.addUser(user);
     }
 //
 //    @GetMapping("/update/<usrID>")

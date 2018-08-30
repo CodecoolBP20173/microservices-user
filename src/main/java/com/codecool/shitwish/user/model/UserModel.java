@@ -26,6 +26,19 @@ public class UserModel {
     public UserModel() {
     }
 
+//    public UserModel(String firstName, String lastName) {
+//        this.firstName = firstName;
+//        this.lastName = lastName;
+//    }
+
+    public String getHashedPassword() {
+        return hashedPassword;
+    }
+
+    public void setHashedPassword(String hashedPassword) {
+        this.hashedPassword = hashedPassword;
+    }
+
     public Integer getUsrID() {
         return usrID;
     }
