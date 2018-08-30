@@ -21,10 +21,10 @@ public class UserApplication {
     @Bean
     public CommandLineRunner init() {
         return (String... args) -> {
-            repository.save(new UserModel());
-            repository.save(new UserModel());
-            repository.save(new UserModel());
-            repository.save(new UserModel());
+            repository.save(new UserModel("firstName", "lastName", "hashedPassword", "email",
+                    "phoneNumber", "country", "city", "zipCode", "street",
+                    "profilePicture"));
+
         };
     }
 }

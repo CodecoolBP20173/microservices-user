@@ -1,6 +1,8 @@
 package com.codecool.shitwish.user.model;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 public class UserModel {
@@ -30,6 +32,20 @@ public class UserModel {
 //        this.firstName = firstName;
 //        this.lastName = lastName;
 //    }
+
+
+    public UserModel(String firstName, String lastName, String hashedPassword, String email, String phoneNumber, String country, String city, String zipCode, String street, String profilePicture) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.hashedPassword = hashedPassword;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.country = country;
+        this.city = city;
+        this.zipCode = zipCode;
+        this.street = street;
+        this.profilePicture = profilePicture;
+    }
 
     public String getHashedPassword() {
         return hashedPassword;
