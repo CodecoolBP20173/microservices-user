@@ -30,7 +30,7 @@ public class UserController {
     }
 
     @GetMapping("/user")
-    public UserModel getUser(@RequestBody String email){
+    public UserModel getUser(String email){
         return service.getByEmail(email);
     }
 
