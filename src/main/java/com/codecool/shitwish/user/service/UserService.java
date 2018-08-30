@@ -11,7 +11,7 @@ import javax.persistence.EntityManager;
 public class UserService {
 
     @Autowired
-    private UserModelRepository repository;
+    private static UserModelRepository repository;
 
     EntityManager em;
 
@@ -25,12 +25,22 @@ public class UserService {
 
     public void delete(int id){}
 
-    public UserModel getUserById(int id){
+    public static UserModel getUserById(int id){
         return repository.getOne(id);
     }
 
-    public UserModel getUserByEmail(String email){
-        UserModel user = new UserModel();
-        return user;
+    public UserModel getByEmail(String email){
+        return repository.getByEmail(email);
     }
 }
+
+
+/* @Transactional
+    public void addToCart(int userId, int productId){
+        if(cartRepository.findByUserId(userId) == null){
+            cartRepository.save(new Cart(userId));
+        }
+        Cart cart = cartRepository.findByUserId(userId);
+
+        cart.addProduct(productId);
+        cartRepository.save(cart);} */

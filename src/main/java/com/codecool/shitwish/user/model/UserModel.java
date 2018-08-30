@@ -1,7 +1,5 @@
 package com.codecool.shitwish.user.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import javax.persistence.*;
 
 @Entity
@@ -9,35 +7,20 @@ public class UserModel {
 
     @Id
     @GeneratedValue
-    Integer usrID;
-
-    @JsonProperty("firstName")
-    String firstName;
-
-    @JsonProperty("lastName")
-    String lastName;
+    private Integer usrID;
+    private String firstName;
+    private String lastName;
+    private String hashedPassword;
 
 //    @Column(unique = true)
-    @JsonProperty("email")
-    String email;
+    private String email;
 
-    @JsonProperty("phoneNumber")
-    String phoneNumber;
-
-    @JsonProperty("country")
-    String country;
-
-    @JsonProperty("city")
-    String city;
-
-    @JsonProperty("zipCode")
-    String zipCode;
-
-    @JsonProperty("street")
-    String street;
-
-    @JsonProperty("profilePicture")
-    String profilePicture;
+    private String phoneNumber;
+    private String country;
+    private String city;
+    private String zipCode;
+    private String street;
+    private String profilePicture;
 
 
     public UserModel() {

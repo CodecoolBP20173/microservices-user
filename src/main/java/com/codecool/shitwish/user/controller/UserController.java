@@ -29,9 +29,9 @@ public class UserController {
 //        return obj;
 //    }
 
-    @GetMapping("/user/{usrID}")
-    public UserModel getUser(@PathVariable("usrID") int usrID){
-        return service.getUserById(usrID);
+    @GetMapping("/user/userid")
+    public UserModel getUser( String email){
+        return service.getByEmail(email);
     }
 
 //    @GetMapping("/user")
@@ -41,8 +41,8 @@ public class UserController {
 //    }
 //
     @GetMapping("/adduser")
-    public void addUser(JSONObject user){
-        //TODO
+    public void addUser(UserModel user){
+
     }
 //
 //    @GetMapping("/update/<usrID>")
