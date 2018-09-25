@@ -1,5 +1,6 @@
 package com.codecool.shitwish.user.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -14,7 +15,7 @@ public class UserModel {
     private String lastName;
     private String hashedPassword;
 
-//    @Column(unique = true)
+    @Column(unique = true)
     private String email;
 
     private String phoneNumber;
@@ -27,12 +28,6 @@ public class UserModel {
 
     public UserModel() {
     }
-
-//    public UserModel(String firstName, String lastName) {
-//        this.firstName = firstName;
-//        this.lastName = lastName;
-//    }
-
 
     public UserModel(String firstName, String lastName, String hashedPassword, String email, String phoneNumber, String country, String city, String zipCode, String street, String profilePicture) {
         this.firstName = firstName;

@@ -34,30 +34,9 @@ public class UserController {
         return service.getByEmail(email);
     }
 
-//    @GetMapping("/user")
-//    public JSONObject getUser(String email){
-//        JSONObject object = new JSONObject();
-//        return object;
-//    }
-//
     @PostMapping("/user")
     public void addUser(@RequestBody UserModel user){
         service.addUser(user);
     }
-//
-//    @GetMapping("/update/<usrID>")
-//    public void updateUser(JSONObject user, int usrID){
-//        //TODO
-//    }
-
-    @GetMapping("/delete/<usrID>")
-    public void deleteUser(int usrID){
-        //TODO
-    }
-
-    /*@PostMapping("/test")
-    public String test(@RequestBody Test test){
-        return test.getName();
-    }*/
 
 }
